@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 	<style type="text/css">
 		*{
 font-family: 'Roboto', sans-serif;
@@ -40,6 +42,9 @@ h3 {
     margin: 0;
 
 }
+a{
+	text-decoration: none;
+}
 		.main{margin: auto; width: 90%; max-width: 1440px;}
 		.esquerda{
 			width: 30%;
@@ -57,11 +62,13 @@ h3 {
 		}
 		.rodape{
 			float: left;
+			font-size: 20px;
 			width: 100%;
 		}
-		.rodape i{
+		.rodape i{    vertical-align: middle;
 			font-size:28px; 
 		}
+
 		.col-3{
 			width: 33%;
 			float: left;
@@ -81,6 +88,16 @@ h3 {
 		    border: 1px solid #ccc;
 		    margin: 30px 0;
 		}
+		@media (max-width: 600px){
+			.esquerda, .direita{
+				width: 100%;
+				max-width: 100%;
+			}
+			.col-3{
+			width: 100%;
+
+			}
+		}
 	</style>
 </head>
 <body>
@@ -89,7 +106,7 @@ h3 {
 		<h1><span >Alana</span> <span class="o">de Oliveira</span> <span class="r">Rodrigues</span><span class="sub">Desenvoldedora web</span></h1>
 		<div class="col-12">
 			<h2>Objetivo</h2>
-			<p>Trabalhar como web designer na área de tecnologia.<br><br>Jornada: Horário comercial.<br>Contrato: CLT.</p>
+			<p>Trabalhar em uma empresa de tecnologia como desenvolvedora web.<br><br>Jornada: Horário comercial.<br>Contrato: CLT.</p>
 		</div>
 		<div class="col-12">
 			<h2>Formação Acadêmica</h2>
@@ -226,7 +243,7 @@ O desenvolvimento foi feito com HTML, CSS, PHP, JavaScript, Mysql.</p>
 	<div class="rodape">
 <div class="linha"></div>
 		<div class="col-3">
-			<i class="fab fa-linkedin"></i> in/alanaorodrigues/ 			
+			<a href="https://www.linkedin.com/in/alanaorodrigues/"><i class="fab fa-linkedin"></i> in/alanaorodrigues/ </a>
 		</div>
 		<div class="col-3">
 			<i class="fas fa-phone-square"></i> (11) 9 5134-2288	
