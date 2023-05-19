@@ -222,18 +222,13 @@
   ]
 }]
   
-  let html = `<button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer">1 - estou estudando</button>
-  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer">2 - preciso de ajuda</button>
-  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer">3 - entrego sozinho</button>
-  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer">4 - posso ensinar</button>
-  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer">5 - sou especialista</button>`;
-
-  
-  // let html = `<button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer">1 - iniciante</button>
-  // <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer">2 - elementar</button>
-  // <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer">3 - intermediário</button>
-  // <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer">4 - avançado</button>
-  // <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer">5 - especialista</button>`;
+  let html = `<div class="grid grid-cols-5 gap-4">
+  <button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>1 - iniciante</span><span class="text-xs">(já estudei)</span></button>
+  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>2 - elementar</span><span class="text-xs">(preciso de ajuda)</span></button>
+  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>3 - intermediário</span><span class="text-xs">(entrego sozinho)</span></button>
+  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>4 - avançado</span><span class="text-xs">(posso ensinar)</span></button>
+  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>5 - especialista</span><span class="text-xs">(sou especialista)</span></button>
+  </div>`;
 
   techs.map(tech=>{
     html += `<h1 class="text-3xl my-5 font-bold">
