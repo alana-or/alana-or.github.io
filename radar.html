@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body{
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
+  <script>
+    
+  const techs = [{
+  tipo: 'Linguagens',
+  itens: [
+    {
+      item: 'C#',
+      posicao: '1',
+    },
+    {
+      item: 'PHP',
+      posicao: '3',
+    },
+    {
+      item: 'Java',
+      posicao: '1',
+    },
+    {
+      item: 'Shell script',
+      posicao: '2',
+    },
+    {
+      item: 'Python',
+      posicao: '1',
+    },
+    {
+      item: 'Ruby',
+      posicao: '4',
+    },
+    {
+      item: 'Javascript',
+      posicao: '4',
+    },
+    {
+      item: 'Typescript',
+      posicao: '2',
+    },
+    {
+      item: 'Kotlin',
+      posicao: '3',
+    },
+    {
+      item: 'Powershell',
+      posicao: '1',
+    },
+    {
+      item: 'F#',
+      posicao: '3',
+    },
+    {
+      item: 'Swift',
+      posicao: '1',
+    },
+  ],
+},
+{
+  tipo: 'Conceitos',
+  itens: [
+    {
+      item: 'Build Automatizado',
+      posicao: '2'
+      },
+      {
+      item: 'Orientação a Objeto',
+      posicao: '3'
+      },
+      {
+      item: 'Serverless',
+      posicao: '1'
+      },
+      {
+      item: 'Programação funcional',
+      posicao: '4'
+      },
+      {
+      item: 'Integração Contínua',
+      posicao: '1'
+      },
+      {
+      item: 'Testes funcionais',
+      posicao: '3'
+      },
+      {
+      item: 'Testes de Unidade',
+      posicao: '1'
+      },
+      {
+      item: 'Release Automatizado',
+      posicao: '5'
+      },
+      {
+      item: 'Domain Driven Design',
+      posicao: '1'
+      }
+  ],
+},
+{
+  tipo: 'Tecnologias',
+  itens: [
+    {
+      item: 'Vue.js',
+      posicao: '1'
+    },
+    {
+      item: 'React',
+      posicao: '2'
+    },
+    {
+      item: 'React Native',
+      posicao: '4'
+    },
+    {
+      item: 'Angular',
+      posicao: '1'
+    },
+    {
+      item: 'Dapper',
+      posicao: '3'
+    },
+    {
+      item: '.Net Core',
+      posicao: '4'
+    },
+    {
+      item: 'SQL Server',
+      posicao: '2'
+    },
+    {
+      item: '.NET Framework',
+      posicao: '1'
+    },
+    {
+      item: 'ASP .NET Core',
+      posicao: '2'
+    },
+    {
+      item: 'ASP .NET MVC',
+      posicao: '1'
+    },
+    {
+      item: 'Entity Framework',
+      posicao: '1'
+    },
+    {
+      item: 'Entity Framework Core',
+      posicao: '3'
+    },
+    {
+      item: 'Docker',
+      posicao: '4'
+    },
+    {
+      item: 'Xamarin',
+      posicao: '5'
+    },
+    {
+      item: 'Xamarim Forms',
+      posicao: '5'
+    },
+    {
+      item: 'Azure Infra',
+      posicao: '4'
+    },
+    {
+      item: 'Kubernetes',
+      posicao: '3'
+    },
+    {
+      item: 'CosmosDB',
+      posicao: '2'
+    },
+    {
+      item: 'TFS/VSTS',
+      posicao: '3'
+    },
+    {
+      item: 'Sharepoint',
+      posicao: '2'
+    },
+    {
+      item: 'Redux',
+      posicao: '4'
+    },
+    {
+      item: 'iOS Nativo',
+      posicao: '4'
+    },
+    {
+      item: 'Elm',
+      posicao: '4',
+    },
+    {
+      item: 'Rancher',
+      posicao: '3'
+    },
+    {
+      item: 'Oracle',
+      posicao: '1'
+    },
+    {
+      item: 'Node.js',
+      posicao: '1'
+    },
+    {
+      item: 'NHibernate',
+      posicao: '2'
+    },
+  ]
+}]
+  
+  // let html = `<button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer">1 - estou estudando</button>
+  // <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer">2 - preciso de ajuda</button>
+  // <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer">3 - entrego sozinho</button>
+  // <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer">4 - posso ensinar</button>
+  // <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer">5 - sou especialista</button>`;
+
+  
+  let html = `<button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer">1 - iniciante</button>
+  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer">2 - elementar</button>
+  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer">3 - intermediário</button>
+  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer">4 - avançado</button>
+  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer">5 - especialista</button>`;
+
+  techs.map(tech=>{
+    html += `<h1 class="text-3xl my-5 font-bold">
+              ${tech.tipo}
+            </h1>
+            <div class="flex flex-wrap">`
+              
+    tech.itens.map(i =>{
+      html += `<div class="grid grid-cols-2 m-2 h-10 items-center">
+                <span class="w-[10rem] min-w-[10rem] text-right cursor-default bg-white p-1 pr-2 truncate hover:text-clip absolute hover:w-fit px-4 hover:z-[10] "> ${i.item}</span>
+                <div class="w-[10rem] min-w-[10rem] flex col-start-2" data-posicao-atual="${i.posicao}">
+                  <svg data-posicao="1" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="2" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="3" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="4" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="5" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                </div>
+              </div>`
+              })
+
+    html += `</div></div>`
+  })
+  
+  document.body = new DOMParser().parseFromString(html, 'text/html').querySelector("body")
+  document.body.classList.add("container")
+  document.body.classList.add("p-10")
+  document.body.classList.add("m-auto")
+  </script>
+</head>
+<body>
+  <script>
+    
+    const botoes = document.querySelectorAll('button');
+
+    botoes.forEach(botao => {
+      botao.addEventListener('click', () => {
+        botao.classList.toggle('bg-blue-200')
+        document.querySelectorAll(`[data-posicao-atual="${botao.dataset.posicao}"]`).forEach(i=>i.parentNode.classList.toggle('hidden'))
+      })
+    })
+
+
+    const bolinhas = document.querySelectorAll('svg');
+    const blue = 'fill-blue-300'
+    const neutral = 'fill-neutral-300'
+    const scale = 'scale-125'
+
+    bolinhas.forEach(function (bolinha) {
+      preencherTodas(bolinha)
+
+      bolinha.addEventListener('mouseout', function () { 
+        
+        if(bolinha.parentNode.dataset.posicaoAtual === "0"){
+          return;
+        }
+        
+        limpa(bolinha)
+        let bolinhasSelecionadas =  pegaTodasBolinhasGrupo(bolinha.parentNode.dataset.posicaoAtual)
+        preenche(bolinha, bolinhasSelecionadas)
+
+      })
+
+      bolinha.addEventListener('mouseover', function () { 
+        limpa(bolinha)
+        let bolinhasSelecionadas =  pegaTodasBolinhasGrupo(bolinha.dataset.posicao)
+        preenche(bolinha, bolinhasSelecionadas)
+
+      })
+
+      bolinha.addEventListener('click', function () { 
+        preencherBolinhas(bolinha)
+      })
+
+    })
+
+    function preencherTodas(bolinha){
+      limpa(bolinha)
+      let bolinhasSelecionadas =  pegaTodasBolinhasGrupo(bolinha.parentNode.dataset.posicaoAtual)
+      preenche(bolinha, bolinhasSelecionadas)
+    }
+
+    function preencherBolinhas(bolinha){
+      if(bolinha.parentNode.dataset.posicaoAtual === bolinha.dataset.posicao){
+        bolinha.parentNode.dataset.posicaoAtual = 0
+
+        limpa(bolinha)
+        return
+      }
+
+      bolinha.parentNode.dataset.posicaoAtual = bolinha.dataset.posicao
+
+      let bolinhasSelecionadas = pegaTodasBolinhasGrupo(bolinha.dataset.posicao)
+      preenche(bolinha, bolinhasSelecionadas)
+    }
+
+    function naoContemItensPreenchidosNaDireita(bolinha){
+      if(bolinha.nextElementSibling === null)
+        return true
+      
+      return !bolinha.nextElementSibling.classList.contains(blue)
+    }
+
+    function limpa(bolinha){
+      bolinha.parentNode.querySelectorAll('svg').forEach(i=> {i.classList.remove(blue); i.classList.add(neutral)} )
+    }
+    
+    function preenche(bolinha, bolinhasSelecionadas){
+      bolinha.parentNode.querySelectorAll(bolinhasSelecionadas).forEach(i=>{i.classList.remove(neutral); i.classList.add(blue)})
+    }
+    
+    function pegaTodasBolinhasGrupo(posicao) {
+      return Array.from({length: posicao}, (_, i) => '[data-posicao=\'' + (i + 1) + '\']').toString()
+    }
+
+    function itemClicadoEstaPreenchido(bolinha){
+      return bolinha.classList.contains(blue)
+    }
+  </script>
+</body>
+</html>
