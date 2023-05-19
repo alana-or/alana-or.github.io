@@ -221,17 +221,35 @@
     },
   ]
 }]
-  
+
+const bolinha = `<svg class="m-1 fill-neutral-100" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
+const bolinhaBlack = `<svg class="m-1 fill-black" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
+
   let html = `<div class="grid grid-cols-5 gap-4">
-  <button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>1 - iniciante</span><span class="text-xs">(já estudei)</span></button>
-  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>2 - elementar</span><span class="text-xs">(preciso de ajuda)</span></button>
-  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>3 - intermediário</span><span class="text-xs">(entrego sozinho)</span></button>
-  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>4 - avançado</span><span class="text-xs">(posso ensinar)</span></button>
-  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg"><span>5 - especialista</span><span class="text-xs">(sou especialista)</span></button>
+  <button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+    <span class="flex justify-center">${bolinhaBlack}${bolinha}${bolinha}${bolinha}${bolinha}</span>
+    <span>iniciante</span>
+  </button>
+  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+    <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinha}${bolinha}${bolinha}</span>
+    <span>elementar</span>
+  </button>
+  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+    <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinha}${bolinha}</span>
+    <span>intermediário</span>
+  </button>
+  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+    <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinha}</span>
+    <span>avançado</span>
+  </button>
+  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+    <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}</span>
+    <span>especialista</span>
+  </button>
   </div>`;
 
   techs.map(tech=>{
-    html += `<h1 class="text-3xl my-5 font-bold">
+    html += `<h1 class="text-3xl my-5 font-bold text-neutral-500">
               ${tech.tipo}
             </h1>
             <div class="flex flex-wrap">`
@@ -271,7 +289,7 @@
     })
 
 
-    const bolinhas = document.querySelectorAll('svg');
+    const bolinhas = document.querySelectorAll('[data-posicao-atual] svg');
     const blue = 'fill-blue-300'
     const neutral = 'fill-neutral-300'
     const scale = 'scale-125'
