@@ -222,27 +222,27 @@
   ]
 }]
 
-const bolinha = `<svg class="m-1 fill-neutral-100" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
-const bolinhaBlack = `<svg class="m-1 fill-black" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
+const bolinha = `<svg class="m-1 fill-neutral-500" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
+const bolinhaBlack = `<svg class="m-1 fill-blue-500" width="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>`
 
   let html = `<div class="grid grid-cols-5 gap-4">
-  <button data-posicao="1" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+  <button data-posicao="1" class="bg-blue-100 p-3 cursor-pointer grid border rounded-lg">
     <span class="flex justify-center">${bolinhaBlack}${bolinha}${bolinha}${bolinha}${bolinha}</span>
     <span>iniciante</span>
   </button>
-  <button data-posicao="2" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+  <button data-posicao="2" class="bg-blue-100 p-3 cursor-pointer grid border rounded-lg">
     <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinha}${bolinha}${bolinha}</span>
     <span>elementar</span>
   </button>
-  <button data-posicao="3" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+  <button data-posicao="3" class="bg-blue-100 p-3 cursor-pointer grid border rounded-lg">
     <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinha}${bolinha}</span>
     <span>intermediário</span>
   </button>
-  <button data-posicao="4" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+  <button data-posicao="4" class="bg-blue-100 p-3 cursor-pointer grid border rounded-lg">
     <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinha}</span>
     <span>avançado</span>
   </button>
-  <button data-posicao="5" class="bg-blue-200 p-3 cursor-pointer grid border rounded-lg">
+  <button data-posicao="5" class="bg-blue-100 p-3 cursor-pointer grid border rounded-lg">
     <span class="flex justify-center">${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}${bolinhaBlack}</span>
     <span>especialista</span>
   </button>
@@ -258,11 +258,11 @@ const bolinhaBlack = `<svg class="m-1 fill-black" width="10" xmlns="http://www.w
       html += `<div class="grid grid-cols-2 m-2 h-10 items-center">
                 <span class="w-[10rem] min-w-[10rem] text-right cursor-default bg-white p-1 pr-2 truncate hover:text-clip absolute hover:w-fit px-4 hover:z-[10] "> ${i.item}</span>
                 <div class="w-[10rem] min-w-[10rem] flex col-start-2" data-posicao-atual="${i.posicao}">
-                  <svg data-posicao="1" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                  <svg data-posicao="2" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                  <svg data-posicao="3" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                  <svg data-posicao="4" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
-                  <svg data-posicao="5" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="1" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="2" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="3" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="4" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
+                  <svg data-posicao="5" class="m-1 cursor-pointer ease-in duration-100 hover:scale-125" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"/></svg>
                 </div>
               </div>`
               })
@@ -283,7 +283,7 @@ const bolinhaBlack = `<svg class="m-1 fill-black" width="10" xmlns="http://www.w
 
     botoes.forEach(botao => {
       botao.addEventListener('click', () => {
-        botao.classList.toggle('bg-blue-200')
+        botao.classList.toggle('bg-blue-100')
         document.querySelectorAll(`[data-posicao-atual="${botao.dataset.posicao}"]`).forEach(i=>i.parentNode.classList.toggle('hidden'))
       })
     })
